@@ -125,7 +125,7 @@
       <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
         <a href="#solutions" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Solutions</a>
         <a href="#portfolio" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Portfolio</a>
-        <a href="#calculator" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Calculator</a>
+        <a href="#whyus" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Why Us</a>
         <a href="#testimonials" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Reviews</a>
         <a href="#blog" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Blog</a>
         <a href="#affiliate" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Affiliate</a>
@@ -148,7 +148,7 @@
     <div id="mobileMenu" class="hidden lg:hidden bg-brandSurface/95 border-b border-slate-800 px-6 py-4 flex flex-col gap-3 text-sm font-medium text-slate-300 backdrop-blur-xl">
       <a href="#solutions" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Solutions</a>
       <a href="#portfolio" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Portfolio</a>
-      <a href="#calculator" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Cost Calculator</a>
+      <a href="#whyus" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Why Us</a>
       <a href="#testimonials" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Reviews</a>
       <a href="#blog" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Blog & Insights</a>
       <a href="#affiliate" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Affiliate Program</a>
@@ -178,8 +178,8 @@
           <i class="fa-brands fa-whatsapp text-lg"></i>
           <span>Chat 24/7 on WhatsApp</span>
         </a>
-        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-base transition-all">
-          Calculate Project Cost
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-base transition-all">
+          Get Free Estimate
         </a>
       </div>
     </section>
@@ -258,43 +258,37 @@
       </div>
     </section>
 
-    <!-- Interactive Cost Calculator -->
-    <section id="calculator" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800">
-        <div class="text-center mb-10">
-          <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">ESTIMATE YOUR BUDGET</span>
-          <h2 class="text-3xl font-bold text-white mt-1">Interactive Cost Calculator</h2>
-          <p class="text-slate-400 text-sm mt-2">Select your requirements below to calculate an instant project estimate.</p>
+    <!-- NEW SECTION: Why Global Brands Trust Us (Replaced Calculator) -->
+    <section id="whyus" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">WHY CHOOSE US</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Engineered for Excellence</h2>
+        <p class="text-slate-400 text-sm mt-2">We combine architectural precision with ultra-fast delivery to secure your business growth.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glow-card p-8 rounded-3xl border border-slate-800">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Rapid Deployment</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Agile development cycles ensuring your scalable cloud platform or custom software goes live ahead of schedule.</p>
         </div>
 
-        <div class="space-y-6">
-          <div>
-            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">1. Select Project Type</label>
-            <select id="calcType" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 text-sm" onchange="calculateCost()">
-              <option value="1200">Web & Cloud Platform ($1,200+)</option>
-              <option value="2500">Enterprise Payroll System ($2,500+)</option>
-              <option value="1800">Cloud Billing & POS ($1,800+)</option>
-              <option value="3500">Custom Enterprise Software ($3,500+)</option>
-            </select>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-headset"></i>
           </div>
+          <h3 class="text-xl font-bold text-white mb-3">24/7 Dedicated Support</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Direct communication lines with our senior technical architects via WhatsApp and emergency channels round-the-clock.</p>
+        </div>
 
-          <div>
-            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">2. Desired Delivery Speed</label>
-            <select id="calcSpeed" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 text-sm" onchange="calculateCost()">
-              <option value="1">Standard Delivery (3-4 Weeks)</option>
-              <option value="1.3">Express Delivery (1-2 Weeks - +30%)</option>
-            </select>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-shield-halved"></i>
           </div>
-
-          <div class="p-6 rounded-2xl bg-indigo-950/30 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <div class="text-xs font-mono text-indigo-300 uppercase">Estimated Investment</div>
-              <div id="totalCost" class="text-3xl font-extrabold text-white mt-1">$1,200 - $1,500</div>
-            </div>
-            <a href="#contact" class="px-6 py-3 rounded-full btn-glow text-white font-semibold text-sm transition-transform hover:scale-105">
-              Proceed With Estimate
-            </a>
-          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Military-grade encryption, secure data pipelines, and robust authorization frameworks protecting all digital assets.</p>
         </div>
       </div>
     </section>
@@ -362,7 +356,7 @@
       </div>
     </section>
 
-    <!-- NEW SECTION: Affiliate Partner Program -->
+    <!-- Affiliate Partner Program -->
     <section id="affiliate" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">PARTNER PROGRAM</span>
@@ -435,7 +429,7 @@
     &copy; 2026 NUVIA Labs. All rights reserved.
   </footer>
 
-  <!-- JavaScript for Mobile Menu & Cost Calculator Logic -->
+  <!-- JavaScript for Mobile Menu -->
   <script>
     const menuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -450,14 +444,6 @@
         mobileMenu.classList.add('hidden');
       });
     });
-
-    function calculateCost() {
-      const basePrice = parseInt(document.getElementById('calcType').value);
-      const speedMultiplier = parseFloat(document.getElementById('calcSpeed').value);
-      const finalMin = Math.round(basePrice * speedMultiplier);
-      const finalMax = Math.round((basePrice + 500) * speedMultiplier);
-      document.getElementById('totalCost').innerText = `$${finalMin.toLocaleString()} - $${finalMax.toLocaleString()}`;
-    }
   </script>
 </body>
 </html>
