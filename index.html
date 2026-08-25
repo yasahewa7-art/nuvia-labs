@@ -55,6 +55,16 @@
       background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #D946EF 100%);
       box-shadow: 0 0 25px -5px rgba(124, 58, 237, 0.5);
     }
+    /* Animated Glowing Divider Line */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .animate-shimmer {
+      background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.8), rgba(236, 72, 153, 0.8), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 4s infinite linear;
+    }
   </style>
 </head>
 <body class="bg-brandDark text-slate-100 antialiased grid-bg relative overflow-x-hidden">
@@ -114,8 +124,13 @@
     </div>
   </section>
 
+  <!-- Animated Gradient Line Separator -->
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="h-[1px] w-full animate-shimmer"></div>
+  </div>
+
   <!-- Solutions Section -->
-  <section id="solutions" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+  <section id="solutions" class="max-w-7xl mx-auto px-6 py-20 scroll-mt-20">
     <div class="text-center max-w-2xl mx-auto mb-16">
       <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">CORE CAPABILITIES</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Enterprise-Grade Solutions</h2>
@@ -166,7 +181,7 @@
         <div>
           <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">SaaS Billing</span>
           <h3 class="text-2xl font-bold text-white mt-2 mb-4">AI-Driven Automated Invoice Engine</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">Built an intelligent invoice reconciliation pipeline processing over 2M daily billing events with automated fraud detection alerts.</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Built an intelligent invoice reconciliation pipeline processing over 2M daily billing events with automated fraud detection alerts.</p>
         </div>
         <div class="flex items-center gap-4 text-xs font-mono text-slate-500 pt-4 border-t border-slate-800">
           <span>Python / PostgreSQL / Redis</span>
