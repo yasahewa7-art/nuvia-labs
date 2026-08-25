@@ -62,7 +62,7 @@
   <!-- Ambient Light -->
   <div class="fixed inset-0 hero-mesh pointer-events-none -z-10"></div>
 
-  <!-- Header -->
+  <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 border-b border-slate-800/80 backdrop-blur-2xl bg-brandDark/70">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 group">
@@ -78,7 +78,9 @@
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
         <a href="#solutions" class="hover:text-indigo-400 transition-colors">Solutions</a>
         <a href="#portfolio" class="hover:text-indigo-400 transition-colors">Portfolio</a>
-        <a href="#blog" class="hover:text-indigo-400 transition-colors text-indigo-400">Blog</a>
+        <a href="#why-us" class="hover:text-indigo-400 transition-colors">Why Us</a>
+        <a href="#blog" class="hover:text-indigo-400 transition-colors">Blog</a>
+        <a href="#affiliate" class="hover:text-indigo-400 transition-colors">Affiliate</a>
         <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
       </nav>
 
@@ -100,7 +102,7 @@
       Engineering Resilient <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Cloud Systems</span>
     </h1>
     <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal mb-12">
-      We build high-performance distributed systems, secure financial data pipelines, and scalable enterprise software solutions.
+      We build high-performance distributed systems, secure financial data pipelines, and scalable enterprise software solutions for global brands.
     </p>
     <div class="flex items-center justify-center gap-4 flex-wrap">
       <a href="#contact" class="px-8 py-4 rounded-full btn-glow text-white font-semibold text-sm transition-all hover:scale-105">
@@ -112,7 +114,93 @@
     </div>
   </section>
 
-  <!-- Blog / Insights Section -->
+  <!-- Solutions Section -->
+  <section id="solutions" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">CORE CAPABILITIES</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Enterprise-Grade Solutions</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glow-card p-8 rounded-3xl border border-slate-800">
+        <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 text-xl">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Cloud Architecture</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Scalable multi-region microservices infrastructure designed for 99.99% uptime and high fault tolerance.</p>
+      </div>
+      <div class="glow-card p-8 rounded-3xl border border-slate-800">
+        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 text-xl">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Secure Payroll Platforms</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">End-to-end encrypted financial calculation engines ensuring total compliance with global banking standards.</p>
+      </div>
+      <div class="glow-card p-8 rounded-3xl border border-slate-800">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 text-xl">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">AI Billing & Automation</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Python-driven automated invoice reconciliation and real-time anomaly detection for high-volume transactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio / Case Studies Section -->
+  <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TRACK RECORD</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Featured Case Studies</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Global Fintech</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-4">Multi-Region Payroll System Scaling</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Migrated a legacy monolithic salary disbursement platform to Kubernetes microservices, reducing latency by 64% across European nodes.</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-mono text-slate-500 pt-4 border-t border-slate-800">
+          <span>AWS / Kubernetes / Go</span>
+        </div>
+      </div>
+      <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">SaaS Billing</span>
+          <h3 class="text-2xl font-bold text-white mt-2 mb-4">AI-Driven Automated Invoice Engine</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Built an intelligent invoice reconciliation pipeline processing over 2M daily billing events with automated fraud detection alerts.</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-mono text-slate-500 pt-4 border-t border-slate-800">
+          <span>Python / PostgreSQL / Redis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section id="why-us" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR ADVANTAGE</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Why Global Brands Trust Us</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glow-card p-6 rounded-3xl border border-slate-800 text-center">
+        <div class="text-3xl font-extrabold text-indigo-400 mb-2">99.99%</div>
+        <h3 class="text-lg font-bold text-white mb-2">Guaranteed Uptime</h3>
+        <p class="text-slate-400 text-xs">Engineered for mission-critical reliability across distributed global environments.</p>
+      </div>
+      <div class="glow-card p-6 rounded-3xl border border-slate-800 text-center">
+        <div class="text-3xl font-extrabold text-purple-400 mb-2">24/7</div>
+        <h3 class="text-lg font-bold text-white mb-2">Active Support</h3>
+        <p class="text-slate-400 text-xs">Direct communication channels via WhatsApp and priority incident response.</p>
+      </div>
+      <div class="glow-card p-6 rounded-3xl border border-slate-800 text-center">
+        <div class="text-3xl font-extrabold text-cyan-400 mb-2">Enterprise</div>
+        <h3 class="text-lg font-bold text-white mb-2">Security Standard</h3>
+        <p class="text-slate-400 text-xs">Airtight end-to-end encryption compliant with international regulatory bodies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Insights Section (Linked to Separate Pages) -->
   <section id="blog" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
     <div class="text-center max-w-2xl mx-auto mb-16">
       <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TECH INSIGHTS</span>
@@ -163,11 +251,67 @@
     </div>
   </section>
 
-  <!-- Contact / Footer Section -->
-  <footer id="contact" class="border-t border-slate-800/80 bg-brandDark py-16 text-center text-xs text-slate-500 font-mono">
+  <!-- Affiliate Partner Program Section -->
+  <section id="affiliate" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+    <div class="glow-card p-10 sm:p-16 rounded-3xl border border-slate-800 text-center relative overflow-hidden">
+      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">PARTNER PROGRAM</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2 mb-4">Earn With Nuvia Labs Affiliate</h2>
+      <p class="text-slate-400 max-w-xl mx-auto text-sm mb-8">Refer clients to our software development studio and earn up to 15% commission on every successful enterprise contract.</p>
+      <a href="#contact" class="inline-block px-8 py-4 rounded-full btn-glow text-white font-semibold text-sm">Join Partner Network</a>
+    </div>
+  </section>
+
+  <!-- Contact Section with Formspree & WhatsApp -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">GET IN TOUCH</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2 mb-4">Let's Build Something Exceptional</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-8">Ready to scale your architecture or secure your pipelines? Reach out to our engineering team directly.</p>
+        
+        <div class="space-y-4 text-sm font-mono text-slate-300">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-indigo-400"></i>
+            nuvialabs.info@gmail.com
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-emerald-400"></i>
+            +94 74 227 1770
+          </div>
+        </div>
+      </div>
+
+      <!-- Formspree Contact Form -->
+      <div class="glow-card p-8 rounded-3xl border border-slate-800">
+        <form action="https://formspree.io/f/nuvialabs.info@gmail.com" method="POST" class="space-y-4">
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-2">YOUR NAME</label>
+            <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-2">EMAIL ADDRESS</label>
+            <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-2">PROJECT DETAILS</label>
+            <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl btn-glow text-white font-semibold text-sm transition-all">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/94742271770" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl transition-all hover:scale-110">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-brandDark py-12 text-center text-xs text-slate-500 font-mono">
     <div class="max-w-7xl mx-auto px-6">
       <p class="text-base text-white font-bold mb-2">NUVIA Labs</p>
-      <p class="text-slate-400 mb-6">Enterprise Software Architecture & Global Cloud Systems</p>
+      <p class="text-slate-400 mb-4">Enterprise Software Architecture & Global Cloud Systems</p>
       <p>&copy; 2026 NUVIA Labs. All rights reserved.</p>
     </div>
   </footer>
