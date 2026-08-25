@@ -35,48 +35,84 @@
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    
     .hero-mesh {
       background-image: 
         radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
         radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
         radial-gradient(at 50% 100%, rgba(6, 182, 212, 0.15) 0px, transparent 50%);
     }
+
     .glow-card {
+      position: relative;
       background: rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(16px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
+    
+    .glow-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.25);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 40%, #818CF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gradient-text-accent {
+      background: linear-gradient(135deg, #818CF8 0%, #C084FC 50%, #F472B6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     .grid-bg {
       background-size: 40px 40px;
       background-image: 
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
+
     .btn-glow {
       background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #D946EF 100%);
       box-shadow: 0 0 25px -5px rgba(124, 58, 237, 0.5);
     }
-    /* Animated Glowing Divider Line */
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
+    .btn-glow:hover {
+      box-shadow: 0 0 35px 0px rgba(124, 58, 237, 0.7);
     }
-    .animate-shimmer {
-      background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.8), rgba(236, 72, 153, 0.8), transparent);
-      background-size: 200% 100%;
-      animation: shimmer 3s infinite linear;
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
     }
   </style>
 </head>
-<body class="bg-brandDark text-slate-100 antialiased grid-bg relative overflow-x-hidden">
+<body class="bg-brandDark text-slate-100 antialiased grid-bg relative overflow-x-hidden min-h-screen flex flex-col justify-between">
 
-  <!-- Ambient Light -->
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/94742271770?text=Hello%20Nuvia%20Labs%2C%20I%20am%20interested%20in%20your%20services." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 group">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <span class="absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+      Chat 24/7 on WhatsApp
+    </span>
+  </a>
+
+  <!-- Ambient Light Background Bleed -->
   <div class="fixed inset-0 hero-mesh pointer-events-none -z-10"></div>
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 border-b border-slate-800/80 backdrop-blur-2xl bg-brandDark/70">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl btn-glow flex items-center justify-center font-black text-xl text-white tracking-wider shadow-lg">
+        <div class="w-10 h-10 rounded-xl btn-glow flex items-center justify-center font-black text-xl text-white tracking-wider shadow-lg group-hover:scale-105 transition-transform">
           N
         </div>
         <div class="flex flex-col">
@@ -85,251 +121,329 @@
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#solutions" class="hover:text-indigo-400 transition-colors">Solutions</a>
-        <a href="#portfolio" class="hover:text-indigo-400 transition-colors">Portfolio</a>
-        <a href="#why-us" class="hover:text-indigo-400 transition-colors">Why Us</a>
-        <a href="#blog" class="hover:text-indigo-400 transition-colors">Blog</a>
-        <a href="#affiliate" class="hover:text-indigo-400 transition-colors">Affiliate</a>
-        <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+      <!-- Quick Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <a href="#solutions" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Solutions</a>
+        <a href="#portfolio" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Portfolio</a>
+        <a href="#whyus" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Why Us</a>
+        <a href="#testimonials" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Reviews</a>
+        <a href="#blog" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Blog</a>
+        <a href="#affiliate" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Affiliate</a>
+        <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Contact</a>
       </nav>
 
+      <!-- Call Action & Mobile Toggle -->
       <div class="flex items-center gap-4">
-        <a href="tel:+94742271770" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800 bg-slate-900/50 text-xs font-mono text-slate-300 hover:border-indigo-500/50 transition-colors">
+        <a href="tel:+94742271770" class="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 border border-slate-700/60 transition-all text-white">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          +94 74 227 1770
+          <span>+94 74 227 1770</span>
         </a>
+        <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 text-xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brandSurface/95 border-b border-slate-800 px-6 py-4 flex flex-col gap-3 text-sm font-medium text-slate-300 backdrop-blur-xl">
+      <a href="#solutions" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Solutions</a>
+      <a href="#portfolio" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Portfolio</a>
+      <a href="#whyus" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Why Us</a>
+      <a href="#testimonials" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Reviews</a>
+      <a href="#blog" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Blog & Insights</a>
+      <a href="#affiliate" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Affiliate Program</a>
+      <a href="#contact" class="mobile-link hover:text-indigo-400 py-1.5">Contact</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-7xl mx-auto px-6 pt-24 pb-20 text-center relative">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-xs font-mono mb-8">
-      <i class="fa-solid fa-sparkles"></i> Next-Gen Enterprise Architecture
-    </div>
-    <h1 class="text-4xl sm:text-7xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight mb-8">
-      Engineering Resilient <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Cloud Systems</span>
-    </h1>
-    <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal mb-12">
-      We build high-performance distributed systems, secure financial data pipelines, and scalable enterprise software solutions for global brands.
-    </p>
-    <div class="flex items-center justify-center gap-4 flex-wrap">
-      <a href="#contact" class="px-8 py-4 rounded-full btn-glow text-white font-semibold text-sm transition-all hover:scale-105">
-        Start a Project
-      </a>
-      <a href="#blog" class="px-8 py-4 rounded-full border border-slate-700 bg-slate-900/40 text-white font-semibold text-sm hover:bg-slate-800 transition-all">
-        Read Tech Insights
-      </a>
-    </div>
-  </section>
+  <main>
+    <!-- Hero Section -->
+    <section class="max-w-5xl mx-auto px-6 pt-20 pb-12 text-center relative">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full text-xs font-mono font-medium tracking-wide border border-indigo-500/30 bg-indigo-950/40 text-indigo-300">
+        <span class="px-1.5 py-0.5 rounded bg-indigo-500/20 text-[10px] font-bold text-indigo-400">GLOBAL STANDARDS</span>
+        24/7 ENTERPRISE SOFTWARE ARCHITECTURE
+      </div>
 
-  <!-- Animated Shimmer Line Separator (വමේ සිට දකුණට දිලිසෙන ලයින් එක) -->
-  <div class="max-w-7xl mx-auto px-6 my-4">
-    <div class="h-[2px] w-full animate-shimmer rounded-full"></div>
-  </div>
+      <h1 class="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight leading-[1.05] mb-8">
+        We Build <span class="gradient-text">Systems That</span><br/>
+        <span class="gradient-text-accent">Scale Global Brands.</span>
+      </h1>
 
-  <!-- Solutions Section -->
-  <section id="solutions" class="max-w-7xl mx-auto px-6 py-16 scroll-mt-20">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">CORE CAPABILITIES</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Enterprise-Grade Solutions</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="glow-card p-8 rounded-3xl border border-slate-800">
-        <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 text-xl">
-          <i class="fa-solid fa-cloud"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3">Cloud Architecture</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">Scalable multi-region microservices infrastructure designed for 99.99% uptime and high fault tolerance.</p>
-      </div>
-      <div class="glow-card p-8 rounded-3xl border border-slate-800">
-        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 text-xl">
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3">Secure Payroll Platforms</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">End-to-end encrypted financial calculation engines ensuring total compliance with global banking standards.</p>
-      </div>
-      <div class="glow-card p-8 rounded-3xl border border-slate-800">
-        <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 text-xl">
-          <i class="fa-solid fa-brain"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3">AI Billing & Automation</h3>
-        <p class="text-slate-400 text-sm leading-relaxed">Python-driven automated invoice reconciliation and real-time anomaly detection for high-volume transactions.</p>
-      </div>
-    </div>
-  </section>
+      <p class="text-lg sm:text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed">
+        High-performance custom cloud platforms, international payroll infrastructures, and real-time billing engines built for global clients and high-growth startups.
+      </p>
 
-  <!-- Portfolio / Case Studies Section -->
-  <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TRACK RECORD</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Featured Case Studies</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Global Fintech</span>
-          <h3 class="text-2xl font-bold text-white mt-2 mb-4">Multi-Region Payroll System Scaling</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">Migrated a legacy monolithic salary disbursement platform to Kubernetes microservices, reducing latency by 64% across European nodes.</p>
-        </div>
-        <div class="flex items-center gap-4 text-xs font-mono text-slate-500 pt-4 border-t border-slate-800">
-          <span>AWS / Kubernetes / Go</span>
-        </div>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/94742271770" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full btn-glow text-white font-semibold text-base transition-all hover:scale-105 flex items-center justify-center gap-3">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Chat 24/7 on WhatsApp</span>
+        </a>
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-base transition-all">
+          Get Free Estimate
+        </a>
       </div>
-      <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">SaaS Billing</span>
-          <h3 class="text-2xl font-bold text-white mt-2 mb-4">AI-Driven Automated Invoice Engine</h3>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">Built an intelligent invoice reconciliation pipeline processing over 2M daily billing events with automated fraud detection alerts.</p>
-        </div>
-        <div class="flex items-center gap-4 text-xs font-mono text-slate-500 pt-4 border-t border-slate-800">
-          <span>Python / PostgreSQL / Redis</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why Us Section -->
-  <section id="why-us" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR ADVANTAGE</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Why Global Brands Trust Us</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="glow-card p-6 rounded-3xl border border-slate-800 text-center">
-        <div class="text-3xl font-extrabold text-indigo-400 mb-2">99.99%</div>
-        <h3 class="text-lg font-bold text-white mb-2">Guaranteed Uptime</h3>
-        <p class="text-slate-400 text-xs">Engineered for mission-critical reliability across distributed global environments.</p>
+    <!-- Tech Stack Marquee Line -->
+    <section id="tech" class="py-16 border-y border-slate-800/50 bg-slate-950/30 overflow-hidden scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-6 mb-6 text-center">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">POWERED BY WORLD-CLASS TECHNOLOGIES</span>
       </div>
-      <div class="glow-card p-6 rounded-3xl border border-slate-800 text-center">
-        <div class="text-3xl font-extrabold text-purple-400 mb-2">24/7</div>
-        <h3 class="text-lg font-bold text-white mb-2">Active Support</h3>
-        <p class="text-slate-400 text-xs">Direct communication channels via WhatsApp and priority incident response.</p>
-      </div>
-      <div class="glow-card p-6 rounded-3xl border border-slate-800 text-center">
-        <div class="text-3xl font-extrabold text-cyan-400 mb-2">Enterprise</div>
-        <h3 class="text-lg font-bold text-white mb-2">Security Standard</h3>
-        <p class="text-slate-400 text-xs">Airtight end-to-end encryption compliant with international regulatory bodies.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog / Insights Section (Linked to Separate Pages) -->
-  <section id="blog" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TECH INSIGHTS</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Latest Engineering Articles</h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- Blog 1 -->
-      <a href="blog-1.html" class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between cursor-pointer hover:border-indigo-500/50 transition-all group">
-        <div>
-          <span class="text-[10px] font-mono text-indigo-400 uppercase tracking-widest">CLOUD ARCHITECTURE</span>
-          <h3 class="text-xl font-bold text-white mt-2 mb-3 group-hover:text-indigo-300 transition-colors">Scaling Microservices for High-Traffic Global Platforms</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-6">Best practices for maintaining 99.99% cloud uptime across distributed global regions.</p>
+      <div class="relative w-full overflow-hidden">
+        <div class="animate-marquee flex items-center gap-12 font-mono text-slate-400 text-sm font-semibold">
+          <span class="flex items-center gap-2"><i class="fa-brands fa-react text-cyan-400 text-xl"></i> React & Next.js</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-node-js text-emerald-400 text-xl"></i> Node.js Microservices</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-aws text-orange-400 text-xl"></i> AWS Cloud Infrastructure</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400 text-xl"></i> Python & AI Engines</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-docker text-blue-400 text-xl"></i> Docker & Kubernetes</span>
+          <span class="flex items-center gap-2"><i class="fa-solid fa-database text-purple-400 text-xl"></i> PostgreSQL / MongoDB</span>
+          <!-- Duplicate Loop -->
+          <span class="flex items-center gap-2"><i class="fa-brands fa-react text-cyan-400 text-xl"></i> React & Next.js</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-node-js text-emerald-400 text-xl"></i> Node.js Microservices</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-aws text-orange-400 text-xl"></i> AWS Cloud Infrastructure</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400 text-xl"></i> Python & AI Engines</span>
+          <span class="flex items-center gap-2"><i class="fa-brands fa-docker text-blue-400 text-xl"></i> Docker & Kubernetes</span>
+          <span class="flex items-center gap-2"><i class="fa-solid fa-database text-purple-400 text-xl"></i> PostgreSQL / MongoDB</span>
         </div>
-        <div class="flex items-center justify-between mt-4">
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="max-w-7xl mx-auto px-6 py-20 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR SERVICES</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Global Software Solutions</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glow-card p-8 rounded-3xl border border-slate-800/90">
+          <h3 class="text-xl font-bold text-white mb-3">Web & Cloud Systems</h3>
+          <p class="text-slate-400 text-sm">Global-grade web platforms, multi-currency E-commerce systems, and ultra-fast web apps.</p>
+        </div>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800/90">
+          <h3 class="text-xl font-bold text-white mb-3">Payroll & HR Systems</h3>
+          <p class="text-slate-400 text-sm">Automated corporate payroll engines supporting tax compliances and remote sync.</p>
+        </div>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800/90">
+          <h3 class="text-xl font-bold text-white mb-3">Cloud Billing & POS</h3>
+          <p class="text-slate-400 text-sm">Real-time inventory management, multi-currency invoicing, and analytics dashboards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR WORK</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Featured Case Studies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-mono mb-4 inline-block">FinTech & Cloud</span>
+            <h3 class="text-2xl font-bold text-white mb-3">Multi-Currency Global Billing Engine</h3>
+            <p class="text-slate-400 text-sm mb-6">High-availability billing platform handling thousands of transactions per minute with real-time tax conversion.</p>
+          </div>
+          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300">Request Similar System &rarr;</a>
+        </div>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono mb-4 inline-block">Enterprise HR</span>
+            <h3 class="text-2xl font-bold text-white mb-3">Automated Corporate Payroll Platform</h3>
+            <p class="text-slate-400 text-sm mb-6">Complete cloud HR and salary disbursement system integrating biometric attendance data and multi-branch compliance.</p>
+          </div>
+          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300">Request Similar System &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Global Brands Trust Us -->
+    <section id="whyus" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">WHY CHOOSE US</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Engineered for Excellence</h2>
+        <p class="text-slate-400 text-sm mt-2">We combine architectural precision with ultra-fast delivery to secure your business growth.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glow-card p-8 rounded-3xl border border-slate-800">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Rapid Deployment</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Agile development cycles ensuring your scalable cloud platform or custom software goes live ahead of schedule.</p>
+        </div>
+
+        <div class="glow-card p-8 rounded-3xl border border-slate-800">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">24/7 Dedicated Support</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Direct communication lines with our senior technical architects via WhatsApp and emergency channels round-the-clock.</p>
+        </div>
+
+        <div class="glow-card p-8 rounded-3xl border border-slate-800">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-6">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Military-grade encryption, secure data pipelines, and robust authorization frameworks protecting all digital assets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TESTIMONIALS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">What Global Clients Say</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <p class="text-slate-300 text-sm italic mb-6">"Nuvia Labs transformed our scaling infrastructure. World-class technical ability!"</p>
+          <div class="text-white font-bold text-sm">Marcus Vance</div>
+          <div class="text-xs text-slate-500">CTO, Vertex Global Tech (USA)</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <p class="text-slate-300 text-sm italic mb-6">"The payroll engine they built saved hundreds of manual hours every month."</p>
+          <div class="text-white font-bold text-sm">Amina Al-Mansoor</div>
+          <div class="text-xs text-slate-500">Operations Director (UAE)</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <p class="text-slate-300 text-sm italic mb-6">"Outstanding speed and communication. They know enterprise software inside out."</p>
+          <div class="text-white font-bold text-sm">Liam O'Connor</div>
+          <div class="text-xs text-slate-500">Founder, CloudScale UK</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Insights -->
+    <section id="blog" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TECH INSIGHTS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Latest Engineering Articles</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-indigo-400 uppercase tracking-widest">CLOUD ARCHITECTURE</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-3">Scaling Microservices for High-Traffic Global Platforms</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Best practices for maintaining 99.99% cloud uptime across distributed global regions.</p>
+          </div>
           <span class="text-xs font-mono text-slate-500">June 2026 • 5 min read</span>
-          <span class="text-xs font-semibold text-indigo-400 flex items-center gap-1">Read Article &rarr;</span>
         </div>
-      </a>
 
-      <!-- Blog 2 -->
-      <a href="blog-2.html" class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between cursor-pointer hover:border-purple-500/50 transition-all group">
-        <div>
-          <span class="text-[10px] font-mono text-purple-400 uppercase tracking-widest">SECURITY & COMPLIANCE</span>
-          <h3 class="text-xl font-bold text-white mt-2 mb-3 group-hover:text-purple-300 transition-colors">Securing Enterprise Payroll & Financial Data Pipelines</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-6">How end-to-end encryption safeguards multi-national salary calculation platforms.</p>
-        </div>
-        <div class="flex items-center justify-between mt-4">
+        <div class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-purple-400 uppercase tracking-widest">SECURITY & COMPLIANCE</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-3">Securing Enterprise Payroll & Financial Data Pipelines</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">How end-to-end encryption safeguards multi-national salary calculation platforms.</p>
+          </div>
           <span class="text-xs font-mono text-slate-500">May 2026 • 4 min read</span>
-          <span class="text-xs font-semibold text-purple-400 flex items-center gap-1">Read Article &rarr;</span>
         </div>
-      </a>
 
-      <!-- Blog 3 -->
-      <a href="blog-3.html" class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between cursor-pointer hover:border-cyan-500/50 transition-all group">
-        <div>
-          <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest">AI & AUTOMATION</span>
-          <h3 class="text-xl font-bold text-white mt-2 mb-3 group-hover:text-cyan-300 transition-colors">The Role of Python and AI in Modern Billing Engines</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-6">Automating invoice reconciliation and anomaly detection using machine learning algorithms.</p>
-        </div>
-        <div class="flex items-center justify-between mt-4">
+        <div class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest">AI & AUTOMATION</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-3">The Role of Python and AI in Modern Billing Engines</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Automating invoice reconciliation and anomaly detection using machine learning algorithms.</p>
+          </div>
           <span class="text-xs font-mono text-slate-500">May 2026 • 6 min read</span>
-          <span class="text-xs font-semibold text-cyan-400 flex items-center gap-1">Read Article &rarr;</span>
         </div>
-      </a>
+      </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Affiliate Partner Program -->
+    <section id="affiliate" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">PARTNER PROGRAM</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Earn With Nuvia Labs Affiliate</h2>
+        <p class="text-slate-400 text-sm mt-2">Refer clients to our software development studio and earn up to 15% commission on every successful project deal.</p>
+      </div>
 
-  <!-- Affiliate Partner Program Section -->
-  <section id="affiliate" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-    <div class="glow-card p-10 sm:p-16 rounded-3xl border border-slate-800 text-center relative overflow-hidden">
-      <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">PARTNER PROGRAM</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2 mb-4">Earn With Nuvia Labs Affiliate</h2>
-      <p class="text-slate-400 max-w-xl mx-auto text-sm mb-8">Refer clients to our software development studio and earn up to 15% commission on every successful enterprise contract.</p>
-      <a href="#contact" class="inline-block px-8 py-4 rounded-full btn-glow text-white font-semibold text-sm">Join Partner Network</a>
-    </div>
-  </section>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl font-bold mx-auto mb-6">1</div>
+          <h3 class="text-lg font-bold text-white mb-2">Sign Up Free</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Join our affiliate network in seconds and get your unique referral tracking link.</p>
+        </div>
 
-  <!-- Contact Section with Formspree & WhatsApp -->
-  <section id="contact" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div>
-        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">GET IN TOUCH</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2 mb-4">Let's Build Something Exceptional</h2>
-        <p class="text-slate-400 text-sm leading-relaxed mb-8">Ready to scale your architecture or secure your pipelines? Reach out to our engineering team directly.</p>
-        
-        <div class="space-y-4 text-sm font-mono text-slate-300">
-          <div class="flex items-center gap-3">
-            <i class="fa-solid fa-envelope text-indigo-400"></i>
-            nuvialabs.info@gmail.com
-          </div>
-          <div class="flex items-center gap-3">
-            <i class="fa-solid fa-phone text-emerald-400"></i>
-            +94 74 227 1770
-          </div>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl font-bold mx-auto mb-6">2</div>
+          <h3 class="text-lg font-bold text-white mb-2">Share & Refer</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Recommend our cloud engineering and software solutions to startups and businesses.</p>
+        </div>
+
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 text-center">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl font-bold mx-auto mb-6">3</div>
+          <h3 class="text-lg font-bold text-white mb-2">Earn Commissions</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Get paid high commission payouts securely as soon as your referred project starts.</p>
         </div>
       </div>
 
-      <!-- Formspree Contact Form -->
-      <div class="glow-card p-8 rounded-3xl border border-slate-800">
-        <form action="https://formspree.io/f/nuvialabs.info@gmail.com" method="POST" class="space-y-4">
-          <div>
-            <label class="block text-xs font-mono text-slate-400 mb-2">YOUR NAME</label>
-            <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+      <div class="mt-12 text-center">
+        <a href="mailto:nuvialabs.info@gmail.com?subject=Join%20Affiliate%20Program" class="inline-flex items-center gap-2 px-8 py-4 rounded-full btn-glow text-white font-semibold text-sm transition-transform hover:scale-105">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Become an Affiliate Partner</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 border-t border-slate-800/60 scroll-mt-20">
+      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800">
+        <div class="text-center mb-10">
+          <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">GET IN TOUCH</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Start Your Next Project</h2>
+          <p class="text-slate-400 text-sm mt-2">Send us a message. Our technical architects will respond within 2 hours.</p>
+        </div>
+
+        <form action="https://formspree.io/f/nuvialabs.info@gmail.com" method="POST" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Your Name</label>
+              <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Email Address</label>
+              <input type="email" name="email" required placeholder="john@company.com" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
           </div>
           <div>
-            <label class="block text-xs font-mono text-slate-400 mb-2">EMAIL ADDRESS</label>
-            <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Project Details</label>
+            <textarea name="message" rows="4" required placeholder="Describe your requirements..." class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm"></textarea>
           </div>
-          <div>
-            <label class="block text-xs font-mono text-slate-400 mb-2">PROJECT DETAILS</label>
-            <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500"></textarea>
-          </div>
-          <button type="submit" class="w-full py-4 rounded-xl btn-glow text-white font-semibold text-sm transition-all">Send Message</button>
+          <button type="submit" class="w-full py-4 rounded-xl btn-glow text-white font-bold text-center text-base transition-transform hover:scale-[1.01]">
+            Send Message Directly
+          </button>
         </form>
       </div>
-    </div>
-  </section>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/94742271770" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl transition-all hover:scale-110">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="border-t border-slate-800/80 bg-brandDark py-12 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-7xl mx-auto px-6">
-      <p class="text-base text-white font-bold mb-2">NUVIA Labs</p>
-      <p class="text-slate-400 mb-4">Enterprise Software Architecture & Global Cloud Systems</p>
-      <p>&copy; 2026 NUVIA Labs. All rights reserved.</p>
-    </div>
+    &copy; 2026 NUVIA Labs. All rights reserved.
   </footer>
 
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
