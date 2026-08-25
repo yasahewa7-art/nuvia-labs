@@ -105,7 +105,6 @@
 
   <!-- Ambient Light Background Bleed -->
   <div class="fixed inset-0 hero-mesh pointer-events-none -z-10"></div>
-  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-transparent blur-[120px] pointer-events-none -z-10"></div>
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-40 border-b border-slate-800/80 backdrop-blur-2xl bg-brandDark/70">
@@ -124,32 +123,19 @@
 
       <!-- Quick Navigation Links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#solutions" class="text-slate-300 hover:text-indigo-400 transition-colors py-1 relative group">
-          Solutions
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#tech" class="text-slate-300 hover:text-indigo-400 transition-colors py-1 relative group">
-          Tech Stack
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#whyus" class="text-slate-300 hover:text-indigo-400 transition-colors py-1 relative group">
-          Why Us
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition-colors py-1 relative group">
-          Contact
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
-        </a>
+        <a href="#solutions" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Solutions</a>
+        <a href="#portfolio" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Portfolio</a>
+        <a href="#testimonials" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Reviews</a>
+        <a href="#whyus" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Why Us</a>
+        <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Contact</a>
       </nav>
 
       <!-- Call Action & Mobile Toggle -->
       <div class="flex items-center gap-4">
-        <a href="tel:+94742271770" class="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 border border-slate-700/60 hover:border-indigo-500/50 transition-all text-white">
+        <a href="tel:+94742271770" class="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 border border-slate-700/60 transition-all text-white">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>+94 74 227 1770</span>
         </a>
-
-        <!-- Mobile Menu Toggle Button -->
         <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2 text-xl focus:outline-none">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -159,7 +145,8 @@
     <!-- Mobile Navigation Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-brandSurface/95 border-b border-slate-800 px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-300 backdrop-blur-xl">
       <a href="#solutions" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Solutions</a>
-      <a href="#tech" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Tech Stack</a>
+      <a href="#portfolio" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Portfolio</a>
+      <a href="#testimonials" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Reviews</a>
       <a href="#whyus" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Why Us</a>
       <a href="#contact" class="mobile-link hover:text-indigo-400 py-2">Contact</a>
     </div>
@@ -168,7 +155,7 @@
   <main>
     <!-- Hero Section -->
     <section class="max-w-5xl mx-auto px-6 pt-20 pb-12 text-center relative">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full text-xs font-mono font-medium tracking-wide border border-indigo-500/30 bg-indigo-950/40 text-indigo-300 backdrop-blur-md">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full text-xs font-mono font-medium tracking-wide border border-indigo-500/30 bg-indigo-950/40 text-indigo-300">
         <span class="px-1.5 py-0.5 rounded bg-indigo-500/20 text-[10px] font-bold text-indigo-400">GLOBAL STANDARDS</span>
         24/7 ENTERPRISE SOFTWARE ARCHITECTURE
       </div>
@@ -187,282 +174,143 @@
           <i class="fa-brands fa-whatsapp text-lg"></i>
           <span>Chat 24/7 on WhatsApp</span>
         </a>
-        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 font-semibold text-base transition-all">
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-base transition-all">
           Get Free Estimate
         </a>
-      </div>
-
-      <!-- Live Stats Ribbon -->
-      <div class="mt-16 pt-8 border-t border-slate-800/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-center font-mono">
-        <div>
-          <div class="text-2xl font-bold text-white">24/7</div>
-          <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Global Support</div>
-        </div>
-        <div>
-          <div class="text-2xl font-bold text-white">99.99%</div>
-          <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Cloud Uptime</div>
-        </div>
-        <div>
-          <div class="text-2xl font-bold text-white">ISO Compliant</div>
-          <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Data Security</div>
-        </div>
-        <div>
-          <div class="text-2xl font-bold text-white">Multi-Currency</div>
-          <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Billing Platforms</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack / Marquee Section -->
-    <section id="tech" class="py-16 border-y border-slate-800/50 bg-slate-950/30 overflow-hidden scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-6 mb-6 text-center">
-        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">POWERED BY WORLD-CLASS TECHNOLOGIES</span>
-      </div>
-      <div class="relative w-full overflow-hidden">
-        <div class="animate-marquee flex items-center gap-12 font-mono text-slate-400 text-sm font-semibold">
-          <span class="flex items-center gap-2"><i class="fa-brands fa-react text-cyan-400 text-xl"></i> React & Next.js</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-node-js text-emerald-400 text-xl"></i> Node.js Microservices</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-aws text-orange-400 text-xl"></i> AWS Cloud Infrastructure</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400 text-xl"></i> Python & AI Engines</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-docker text-blue-400 text-xl"></i> Docker & Kubernetes</span>
-          <span class="flex items-center gap-2"><i class="fa-solid fa-database text-purple-400 text-xl"></i> PostgreSQL / MongoDB</span>
-          <!-- Duplicate Loop -->
-          <span class="flex items-center gap-2"><i class="fa-brands fa-react text-cyan-400 text-xl"></i> React & Next.js</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-node-js text-emerald-400 text-xl"></i> Node.js Microservices</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-aws text-orange-400 text-xl"></i> AWS Cloud Infrastructure</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400 text-xl"></i> Python & AI Engines</span>
-          <span class="flex items-center gap-2"><i class="fa-brands fa-docker text-blue-400 text-xl"></i> Docker & Kubernetes</span>
-          <span class="flex items-center gap-2"><i class="fa-solid fa-database text-purple-400 text-xl"></i> PostgreSQL / MongoDB</span>
-        </div>
       </div>
     </section>
 
     <!-- Solutions Section -->
-    <section id="solutions" class="max-w-7xl mx-auto px-6 py-24 scroll-mt-20">
+    <section id="solutions" class="max-w-7xl mx-auto px-6 py-20 scroll-mt-20">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR SERVICES</span>
         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Global Software Solutions</h2>
-        <p class="text-slate-400 mt-3 text-base">Custom tailored architecture designed for international operations.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="glow-card p-8 rounded-3xl border border-slate-800/90 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 font-mono text-lg font-bold">
-              &lt;/&gt;
-            </div>
-            <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">ENTERPRISE WEB</span>
-            <h3 class="text-2xl font-bold text-white mt-1 mb-4">Web & Cloud Systems</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Global-grade web platforms, multi-currency E-commerce systems, and ultra-fast web apps optimized for worldwide speed and SEO.
-            </p>
-            <div class="space-y-2.5 font-mono text-xs text-slate-300">
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-emerald-400">✓</span> Global E-Commerce & Stripe/PayPal
-              </div>
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-emerald-400">✓</span> Lightning Fast CDN Deployment
-              </div>
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-emerald-400">✓</span> Custom Web Portals & Dashboards
-              </div>
-            </div>
-          </div>
-          <a href="#contact" class="mt-8 block text-center py-3.5 rounded-xl bg-white/5 hover:bg-indigo-600 hover:text-white border border-slate-700/60 hover:border-indigo-500 font-semibold text-sm transition-all text-slate-200">
-            Request Proposal &rarr;
-          </a>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800/90">
+          <h3 class="text-xl font-bold text-white mb-3">Web & Cloud Systems</h3>
+          <p class="text-slate-400 text-sm">Global-grade web platforms, multi-currency E-commerce systems, and ultra-fast web apps.</p>
         </div>
-
-        <!-- Card 2 -->
-        <div class="glow-card p-8 rounded-3xl border border-slate-800/90 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 font-mono text-lg font-bold">
-              ⚙️
-            </div>
-            <span class="text-xs font-mono text-purple-400 tracking-widest uppercase">ENTERPRISE PAYROLL</span>
-            <h3 class="text-2xl font-bold text-white mt-1 mb-4">Payroll & HR Infrastructure</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Automated corporate payroll engines supporting tax compliances, biometric attendance tracking, salary slips, and multi-country configurations.
-            </p>
-            <div class="space-y-2.5 font-mono text-xs text-slate-300">
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-purple-400">✓</span> Automated Tax & EPF/ETF Engine
-              </div>
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-purple-400">✓</span> Cloud Biometric & Remote Sync
-              </div>
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-purple-400">✓</span> Secure Employee Portal Vault
-              </div>
-            </div>
-          </div>
-          <a href="#contact" class="mt-8 block text-center py-3.5 rounded-xl bg-white/5 hover:bg-purple-600 hover:text-white border border-slate-700/60 hover:border-purple-500 font-semibold text-sm transition-all text-slate-200">
-            Deploy Payroll &rarr;
-          </a>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800/90">
+          <h3 class="text-xl font-bold text-white mb-3">Payroll & HR Systems</h3>
+          <p class="text-slate-400 text-sm">Automated corporate payroll engines supporting tax compliances and remote sync.</p>
         </div>
-
-        <!-- Card 3 -->
-        <div class="glow-card p-8 rounded-3xl border border-slate-800/90 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 font-mono text-lg font-bold">
-              📊
-            </div>
-            <span class="text-xs font-mono text-cyan-400 tracking-widest uppercase">FINANCIAL INTELLIGENCE</span>
-            <h3 class="text-2xl font-bold text-white mt-1 mb-4">Cloud Billing & POS</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Real-time inventory management and invoicing platforms. Automated recurring billing, stock sync, and multi-branch sales reporting.
-            </p>
-            <div class="space-y-2.5 font-mono text-xs text-slate-300">
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-cyan-400">✓</span> Real-Time Multi-Currency Invoicing
-              </div>
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-cyan-400">✓</span> Automated Stock & Warehouse Sync
-              </div>
-              <div class="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800">
-                <span class="text-cyan-400">✓</span> Executive Analytics & Financials
-              </div>
-            </div>
-          </div>
-          <a href="#contact" class="mt-8 block text-center py-3.5 rounded-xl bg-white/5 hover:bg-cyan-600 hover:text-white border border-slate-700/60 hover:border-cyan-500 font-semibold text-sm transition-all text-slate-200">
-            Explore Billing &rarr;
-          </a>
+        <div class="glow-card p-8 rounded-3xl border border-slate-800/90">
+          <h3 class="text-xl font-bold text-white mb-3">Cloud Billing & POS</h3>
+          <p class="text-slate-400 text-sm">Real-time inventory management, multi-currency invoicing, and analytics dashboards.</p>
         </div>
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="whyus" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+    <!-- NEW SECTION 1: Portfolio / Case Studies -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">WHY WORK WITH US</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Why International Clients Trust Us</h2>
-        <p class="text-slate-400 mt-3 text-base">Built to deliver enterprise durability, round-the-clock availability, and top-tier security.</p>
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR WORK</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Featured Case Studies</h2>
+        <p class="text-slate-400 mt-2 text-sm">Some of the enterprise systems we have successfully engineered.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-4 text-xl">
-            <i class="fa-solid fa-headset"></i>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-mono">FinTech & Cloud</span>
+              <span class="text-xs font-mono text-slate-500">Global Client</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Multi-Currency Global Billing Engine</h3>
+            <p class="text-slate-400 text-sm mb-6">Built a high-availability billing platform handling thousands of transactions per minute with real-time tax conversion and automated Stripe workflows.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">Node.js</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">React</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">AWS</span>
+            </div>
           </div>
-          <h4 class="text-lg font-bold text-white mb-2">24/7 Global Support</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Dedicated technical response team available round the clock across all global time zones.</p>
+          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300 inline-flex items-center gap-2">
+            Request Similar System &rarr;
+          </a>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mx-auto mb-4 text-xl">
-            <i class="fa-solid fa-shield-halved"></i>
+        <!-- Project 2 -->
+        <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono">Enterprise HR</span>
+              <span class="text-xs font-mono text-slate-500">Corporate Sector</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Automated Corporate Payroll Platform</h3>
+            <p class="text-slate-400 text-sm mb-6">Engineered a complete cloud HR and salary disbursement system integrating biometric attendance data and compliance reporting for multi-national branches.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">Next.js</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">Python</span>
+              <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">PostgreSQL</span>
+            </div>
           </div>
-          <h4 class="text-lg font-bold text-white mb-2">Bank-Grade Security</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">End-to-end encrypted architecture safeguarding critical company and financial data.</p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto mb-4 text-xl">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <h4 class="text-lg font-bold text-white mb-2">Rapid Deployment</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Agile development cycles guaranteeing fast delivery without compromising software quality.</p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 text-center">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mx-auto mb-4 text-xl">
-            <i class="fa-solid fa-earth-americas"></i>
-          </div>
-          <h4 class="text-lg font-bold text-white mb-2">Cross-Border Systems</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Designed from ground up to support multi-currency, multi-language, and global integrations.</p>
+          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300 inline-flex items-center gap-2">
+            Request Similar System &rarr;
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Direct Contact Form Section -->
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 scroll-mt-20">
-      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800">
-        <div class="text-center mb-10">
-          <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">GET IN TOUCH</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Start Your Next Project</h2>
-          <p class="text-slate-400 text-sm mt-2">Send us a direct message. Our technical architects will respond within 2 hours.</p>
+    <!-- NEW SECTION 2: Testimonials / Client Reviews -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TESTIMONIALS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">What Global Clients Say</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
+          <p class="text-slate-300 text-sm italic mb-6">"Nuvia Labs transformed our scaling infrastructure. Their response time and technical capability are truly world-class."</p>
+          <div>
+            <div class="text-white font-bold text-sm">Marcus Vance</div>
+            <div class="text-xs text-slate-500">CTO, Vertex Global Tech (USA)</div>
+          </div>
         </div>
 
-        <form action="https://formspree.io/f/nuvialabs.info@gmail.com" method="POST" class="space-y-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Your Name</label>
-              <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
-            </div>
-            <div>
-              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Email Address</label>
-              <input type="email" name="email" required placeholder="john@company.com" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Phone / WhatsApp</label>
-              <input type="text" name="phone" placeholder="+94 74 227 1770" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
-            </div>
-            <div>
-              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">System Required</label>
-              <select name="service" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 text-sm">
-                <option value="Web Development">Web & Cloud Systems</option>
-                <option value="Payroll Systems">Enterprise Payroll Systems</option>
-                <option value="Billing Systems">Cloud Billing & POS</option>
-                <option value="Custom Enterprise Solution">Custom Enterprise Software</option>
-              </select>
-            </div>
-          </div>
-
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
+          <p class="text-slate-300 text-sm italic mb-6">"The payroll engine they built for us saved hundreds of manual hours every month. Highly professional team!"</p>
           <div>
-            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Project Details</label>
-            <textarea name="message" rows="4" required placeholder="Describe your project requirements, goals, or questions..." class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm"></textarea>
+            <div class="text-white font-bold text-sm">Amina Al-Mansoor</div>
+            <div class="text-xs text-slate-500">Operations Director (UAE)</div>
           </div>
+        </div>
 
-          <button type="submit" class="w-full py-4 rounded-xl btn-glow text-white font-bold text-center text-base transition-transform hover:scale-[1.01]">
-            Send Message Directly
-          </button>
-        </form>
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
+          <p class="text-slate-300 text-sm italic mb-6">"Outstanding communication and delivery speed. They know enterprise software inside out."</p>
+          <div>
+            <div class="text-white font-bold text-sm">Liam O'Connor</div>
+            <div class="text-xs text-slate-500">Founder, CloudScale UK</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Build Your System?</h2>
+        <p class="text-slate-400 text-sm mb-8">Chat with our architectural engineers instantly or drop us a message below.</p>
+        <a href="https://wa.me/94742271770" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-full btn-glow text-white font-semibold text-base transition-all hover:scale-105">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Chat on WhatsApp Now</span>
+        </a>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-800/80 bg-brandDark py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-400 text-sm">
-      <div class="flex items-center gap-3">
-        <div class="w-6 h-6 rounded bg-indigo-600 flex items-center justify-center font-bold text-xs text-white">N</div>
-        <span class="text-slate-300 font-semibold">NUVIA Labs</span>
-        <span class="text-slate-600">|</span>
-        <span class="text-xs text-slate-500 font-mono">Global Software Engineering</span>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-6 font-mono text-xs text-slate-400">
-        <a href="https://nuvialabs.net" target="_blank" class="hover:text-indigo-400 transition">nuvialabs.net</a>
-        <a href="mailto:nuvialabs.info@gmail.com" class="hover:text-indigo-400 transition">nuvialabs.info@gmail.com</a>
-        <a href="tel:+94742271770" class="hover:text-indigo-400 transition">+94 74 227 1770</a>
-      </div>
-
-      <div class="text-xs font-mono tracking-widest text-slate-500 uppercase">
-        STREAMLINE • PROMOTE • GROW
-      </div>
-    </div>
+  <footer class="border-t border-slate-800/80 bg-brandDark py-12 text-center text-xs text-slate-500 font-mono">
+    &copy; 2026 NUVIA Labs. All rights reserved.
   </footer>
 
-  <!-- JavaScript for Mobile Menu & Smooth Interactivity -->
+  <!-- JavaScript for Mobile Menu -->
   <script>
     const menuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
+    menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
   </script>
-
 </body>
 </html>
