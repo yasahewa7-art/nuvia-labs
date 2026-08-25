@@ -122,11 +122,13 @@
       </a>
 
       <!-- Quick Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
         <a href="#solutions" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Solutions</a>
         <a href="#portfolio" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Portfolio</a>
+        <a href="#calculator" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Calculator</a>
         <a href="#testimonials" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Reviews</a>
-        <a href="#whyus" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Why Us</a>
+        <a href="#blog" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Blog</a>
+        <a href="#careers" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Careers</a>
         <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition-colors py-1">Contact</a>
       </nav>
 
@@ -136,19 +138,21 @@
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>+94 74 227 1770</span>
         </a>
-        <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2 text-xl focus:outline-none">
+        <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 text-xl focus:outline-none">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navigation Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-brandSurface/95 border-b border-slate-800 px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-300 backdrop-blur-xl">
-      <a href="#solutions" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Solutions</a>
-      <a href="#portfolio" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Portfolio</a>
-      <a href="#testimonials" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Reviews</a>
-      <a href="#whyus" class="mobile-link hover:text-indigo-400 py-2 border-b border-slate-800/50">Why Us</a>
-      <a href="#contact" class="mobile-link hover:text-indigo-400 py-2">Contact</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-brandSurface/95 border-b border-slate-800 px-6 py-4 flex flex-col gap-3 text-sm font-medium text-slate-300 backdrop-blur-xl">
+      <a href="#solutions" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Solutions</a>
+      <a href="#portfolio" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Portfolio</a>
+      <a href="#calculator" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Cost Calculator</a>
+      <a href="#testimonials" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Reviews</a>
+      <a href="#blog" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Blog & Insights</a>
+      <a href="#careers" class="mobile-link hover:text-indigo-400 py-1.5 border-b border-slate-800/50">Careers</a>
+      <a href="#contact" class="mobile-link hover:text-indigo-400 py-1.5">Contact</a>
     </div>
   </header>
 
@@ -174,13 +178,13 @@
           <i class="fa-brands fa-whatsapp text-lg"></i>
           <span>Chat 24/7 on WhatsApp</span>
         </a>
-        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-base transition-all">
-          Get Free Estimate
+        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold text-base transition-all">
+          Calculate Project Cost
         </a>
       </div>
     </section>
 
-    <!-- TECH STACK ANIMATION LINE (MARQUEE) -->
+    <!-- Tech Stack Marquee Line -->
     <section id="tech" class="py-16 border-y border-slate-800/50 bg-slate-950/30 overflow-hidden scroll-mt-20">
       <div class="max-w-7xl mx-auto px-6 mb-6 text-center">
         <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">POWERED BY WORLD-CLASS TECHNOLOGIES</span>
@@ -193,7 +197,7 @@
           <span class="flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400 text-xl"></i> Python & AI Engines</span>
           <span class="flex items-center gap-2"><i class="fa-brands fa-docker text-blue-400 text-xl"></i> Docker & Kubernetes</span>
           <span class="flex items-center gap-2"><i class="fa-solid fa-database text-purple-400 text-xl"></i> PostgreSQL / MongoDB</span>
-          <!-- Duplicate Loop for Smooth Infinite Effect -->
+          <!-- Duplicate Loop -->
           <span class="flex items-center gap-2"><i class="fa-brands fa-react text-cyan-400 text-xl"></i> React & Next.js</span>
           <span class="flex items-center gap-2"><i class="fa-brands fa-node-js text-emerald-400 text-xl"></i> Node.js Microservices</span>
           <span class="flex items-center gap-2"><i class="fa-brands fa-aws text-orange-400 text-xl"></i> AWS Cloud Infrastructure</span>
@@ -227,41 +231,70 @@
       </div>
     </section>
 
-    <!-- Portfolio / Case Studies Section -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">OUR WORK</span>
         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Featured Case Studies</h2>
-        <p class="text-slate-400 mt-2 text-sm">Some of the enterprise systems we have successfully engineered.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-mono">FinTech & Cloud</span>
-              <span class="text-xs font-mono text-slate-500">Global Client</span>
-            </div>
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-mono mb-4 inline-block">FinTech & Cloud</span>
             <h3 class="text-2xl font-bold text-white mb-3">Multi-Currency Global Billing Engine</h3>
-            <p class="text-slate-400 text-sm mb-6">Built a high-availability billing platform handling thousands of transactions per minute with real-time tax conversion and automated Stripe workflows.</p>
+            <p class="text-slate-400 text-sm mb-6">High-availability billing platform handling thousands of transactions per minute with real-time tax conversion.</p>
           </div>
-          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300 inline-flex items-center gap-2">
-            Request Similar System &rarr;
-          </a>
+          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300">Request Similar System &rarr;</a>
         </div>
-
         <div class="glow-card p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono">Enterprise HR</span>
-              <span class="text-xs font-mono text-slate-500">Corporate Sector</span>
-            </div>
+            <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono mb-4 inline-block">Enterprise HR</span>
             <h3 class="text-2xl font-bold text-white mb-3">Automated Corporate Payroll Platform</h3>
-            <p class="text-slate-400 text-sm mb-6">Engineered a complete cloud HR and salary disbursement system integrating biometric attendance data and compliance reporting for multi-national branches.</p>
+            <p class="text-slate-400 text-sm mb-6">Complete cloud HR and salary disbursement system integrating biometric attendance data and multi-branch compliance.</p>
           </div>
-          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300 inline-flex items-center gap-2">
-            Request Similar System &rarr;
-          </a>
+          <a href="#contact" class="text-indigo-400 font-semibold text-sm hover:text-indigo-300">Request Similar System &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 3: Interactive Cost Calculator -->
+    <section id="calculator" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800">
+        <div class="text-center mb-10">
+          <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">ESTIMATE YOUR BUDGET</span>
+          <h2 class="text-3xl font-bold text-white mt-1">Interactive Cost Calculator</h2>
+          <p class="text-slate-400 text-sm mt-2">Select your requirements below to calculate an instant project estimate.</p>
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">1. Select Project Type</label>
+            <select id="calcType" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 text-sm" onchange="calculateCost()">
+              <option value="1200">Web & Cloud Platform ($1,200+)</option>
+              <option value="2500">Enterprise Payroll System ($2,500+)</option>
+              <option value="1800">Cloud Billing & POS ($1,800+)</option>
+              <option value="3500">Custom Enterprise Software ($3,500+)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">2. Desired Delivery Speed</label>
+            <select id="calcSpeed" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-indigo-500 text-sm" onchange="calculateCost()">
+              <option value="1">Standard Delivery (3-4 Weeks)</option>
+              <option value="1.3">Express Delivery (1-2 Weeks - +30%)</option>
+            </select>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-indigo-950/30 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="text-xs font-mono text-indigo-300 uppercase">Estimated Investment</div>
+              <div id="totalCost" class="text-3xl font-extrabold text-white mt-1">$1,200 - $1,500</div>
+            </div>
+            <a href="#contact" class="px-6 py-3 rounded-full btn-glow text-white font-semibold text-sm transition-transform hover:scale-105">
+              Proceed With Estimate
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -274,41 +307,122 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
-          <p class="text-slate-300 text-sm italic mb-6">"Nuvia Labs transformed our scaling infrastructure. Their response time and technical capability are truly world-class."</p>
-          <div>
-            <div class="text-white font-bold text-sm">Marcus Vance</div>
-            <div class="text-xs text-slate-500">CTO, Vertex Global Tech (USA)</div>
-          </div>
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <p class="text-slate-300 text-sm italic mb-6">"Nuvia Labs transformed our scaling infrastructure. World-class technical ability!"</p>
+          <div class="text-white font-bold text-sm">Marcus Vance</div>
+          <div class="text-xs text-slate-500">CTO, Vertex Global Tech (USA)</div>
         </div>
-
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
-          <p class="text-slate-300 text-sm italic mb-6">"The payroll engine they built for us saved hundreds of manual hours every month. Highly professional team!"</p>
-          <div>
-            <div class="text-white font-bold text-sm">Amina Al-Mansoor</div>
-            <div class="text-xs text-slate-500">Operations Director (UAE)</div>
-          </div>
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <p class="text-slate-300 text-sm italic mb-6">"The payroll engine they built saved hundreds of manual hours every month."</p>
+          <div class="text-white font-bold text-sm">Amina Al-Mansoor</div>
+          <div class="text-xs text-slate-500">Operations Director (UAE)</div>
         </div>
-
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between">
-          <p class="text-slate-300 text-sm italic mb-6">"Outstanding communication and delivery speed. They know enterprise software inside out."</p>
-          <div>
-            <div class="text-white font-bold text-sm">Liam O'Connor</div>
-            <div class="text-xs text-slate-500">Founder, CloudScale UK</div>
-          </div>
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+          <p class="text-slate-300 text-sm italic mb-6">"Outstanding speed and communication. They know enterprise software inside out."</p>
+          <div class="text-white font-bold text-sm">Liam O'Connor</div>
+          <div class="text-xs text-slate-500">Founder, CloudScale UK</div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
-      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Build Your System?</h2>
-        <p class="text-slate-400 text-sm mb-8">Chat with our architectural engineers instantly or drop us a message below.</p>
-        <a href="https://wa.me/94742271770" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-full btn-glow text-white font-semibold text-base transition-all hover:scale-105">
-          <i class="fa-brands fa-whatsapp text-xl"></i>
-          <span>Chat on WhatsApp Now</span>
-        </a>
+    <!-- NEW SECTION 4: Blog / Insights -->
+    <section id="blog" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">TECH INSIGHTS</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Latest Engineering Articles</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-indigo-400 uppercase tracking-widest">CLOUD ARCHITECTURE</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-3">Scaling Microservices for High-Traffic Global Platforms</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Best practices for maintaining 99.99% cloud uptime across distributed global regions.</p>
+          </div>
+          <span class="text-xs font-mono text-slate-500">June 2026 • 5 min read</span>
+        </div>
+
+        <div class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-purple-400 uppercase tracking-widest">SECURITY & COMPLIANCE</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-3">Securing Enterprise Payroll & Financial Data Pipelines</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">How end-to-end encryption safeguards multi-national salary calculation platforms.</p>
+          </div>
+          <span class="text-xs font-mono text-slate-500">May 2026 • 4 min read</span>
+        </div>
+
+        <div class="glow-card p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest">AI & AUTOMATION</span>
+            <h3 class="text-xl font-bold text-white mt-2 mb-3">The Role of Python and AI in Modern Billing Engines</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Automating invoice reconciliation and anomaly detection using machine learning algorithms.</p>
+          </div>
+          <span class="text-xs font-mono text-slate-500">May 2026 • 6 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 5: Careers / Join Our Team -->
+    <section id="careers" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">JOIN OUR STUDIO</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Open Engineering Roles</h2>
+        <p class="text-slate-400 text-sm mt-2">Build groundbreaking products with a world-class team.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">Remote / Hybrid</span>
+            <h3 class="text-xl font-bold text-white mt-3 mb-1">Senior Cloud Software Architect</h3>
+            <p class="text-slate-400 text-xs">Node.js, AWS, Kubernetes • Full-Time</p>
+          </div>
+          <a href="mailto:nuvialabs.info@gmail.com?subject=Application:%20Senior%20Cloud%20Architect" class="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-slate-700 text-white text-xs font-semibold whitespace-nowrap transition">
+            Apply Now
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-full">Remote</span>
+            <h3 class="text-xl font-bold text-white mt-3 mb-1">Full-Stack React Engineer</h3>
+            <p class="text-slate-400 text-xs">React, Next.js, Tailwind CSS • Full-Time</p>
+          </div>
+          <a href="mailto:nuvialabs.info@gmail.com?subject=Application:%20Full-Stack%20Engineer" class="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-slate-700 text-white text-xs font-semibold whitespace-nowrap transition">
+            Apply Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 border-t border-slate-800/60 scroll-mt-20">
+      <div class="glow-card p-8 sm:p-12 rounded-3xl border border-slate-800">
+        <div class="text-center mb-10">
+          <span class="text-xs font-mono text-indigo-400 tracking-widest uppercase">GET IN TOUCH</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Start Your Next Project</h2>
+          <p class="text-slate-400 text-sm mt-2">Send us a message. Our technical architects will respond within 2 hours.</p>
+        </div>
+
+        <form action="https://formspree.io/f/nuvialabs.info@gmail.com" method="POST" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Your Name</label>
+              <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Email Address</label>
+              <input type="email" name="email" required placeholder="john@company.com" class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Project Details</label>
+            <textarea name="message" rows="4" required placeholder="Describe your requirements..." class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl btn-glow text-white font-bold text-center text-base transition-transform hover:scale-[1.01]">
+            Send Message Directly
+          </button>
+        </form>
       </div>
     </section>
   </main>
@@ -318,11 +432,29 @@
     &copy; 2026 NUVIA Labs. All rights reserved.
   </footer>
 
-  <!-- JavaScript for Mobile Menu -->
+  <!-- JavaScript for Mobile Menu & Cost Calculator Logic -->
   <script>
     const menuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    function calculateCost() {
+      const basePrice = parseInt(document.getElementById('calcType').value);
+      const speedMultiplier = parseFloat(document.getElementById('calcSpeed').value);
+      const finalMin = Math.round(basePrice * speedMultiplier);
+      const finalMax = Math.round((basePrice + 500) * speedMultiplier);
+      document.getElementById('totalCost').innerText = `$${finalMin.toLocaleString()} - $${finalMax.toLocaleString()}`;
+    }
   </script>
 </body>
 </html>
